@@ -1,0 +1,226 @@
+digraph marriage {
+	
+	// nodes
+	// logic steps
+	1[label="AND"]
+	2[label="AND"]
+	3[label="OR"]
+	4[label="AND"]
+	5[label="AND"]
+	6[label="OR"]
+	7[label="AND"]
+	8[label="NOT"]
+	8[label="NOT"]
+	9[label="NOT"]
+	10[label="NOT"]
+	11[label="NOT"]
+	12[label="NOT"]
+	13[label="AND"]
+	14[label="ALLOWS"]
+	15[label="ALLOWS"]
+	16[label="ALLOWS"]
+	17[label="ALLOWS"]
+	18[label="ALLOWS"]
+	19[label="ALLOWS"]
+	20[label="ALLOWS"]
+	21[label="AND"]
+	22[label="OR"]
+	23[label="AND"]
+	22[label="OR"]
+	24[label="AND"]
+	25[label="NOT"]
+	26[label="AND"]
+	27[label="NOT"]
+	28[label="NOT"]
+	29[label="NOT"]
+	30[label="NOT"]
+	31[label="AND"]
+	32[label="AND"]
+	33[label="OR"]
+	34[label="NOT"]
+	35[label="NOT"]
+	36[label="ALLOWS"]
+	37[label="ALLOWS"]
+	38[label="NOT"]
+	39[label="ALLOWS"]
+	40[label="NOT"]
+	41[label="NOT"]
+	42[label="NOT"]
+	43[label="NOT"]
+	44[label="OR"]
+	45[label="NOT"]
+	46[label="AND"]
+	47[label="ALLOWS"]
+	48[label="AND"]
+	
+	// process steps
+	AA[label="I want to visit the UK but not stay more than 6 months"]
+	AB[label="Eligible to apply for a marriage visitor visa"]
+	AC[label="Your partner is a British citizen"]
+	AD[label="Your partner is settled in the UK"]
+	AE[label="Your partner has refugee status in the UK"]
+	AF[label="Your partner has humanitarian protection in the UK"]
+	AG[label="I want to live permanently in the UK"]
+	AH[label="Eligible to apply for a family visa"]
+	AI[label="Your partner is a citizen of a country in the EU"]
+	AJ[label="Your partner is a citizen of a country in the EEA"]
+	AK[label="Your partner is a citizen of Switzerland"]
+	AL[label="I want to join my family in the UK"]
+	AM[label="Eligible to apply for a family permit"]
+	AN[label="Apply for and get a family permit"]
+	AO[label="Give notice of your intention to get married"]
+	AP[label="Notification to immigration officials at the Home Office"]
+	AQ[label="Questions about your relationship from Home Office"]
+	AR[label="70 day Home Office clock starts"]
+	AS[label="70 day Home Office clock ends"]
+	AT[label="You have indefinite leave to remain in the UK"]
+	AU[label="You are a citizen of Switzerland"]
+	AV[label="You are a citizen of a country in the EEA"]
+	AW[label="You are a citizen of a country in the EU"]
+	AX[label="You are a British citizen"]
+	AY[label="Lockdown"]
+	AZ[label="Ineligible to marry or form a civil partnership in England or Wales"]
+	BA[label="I want to get married or form a civil partnership"]
+	BB[label="You have permission from your parents or guardians"]
+	BC[label="You are aged 16-18"]
+	BD[label="You are over 18"]
+	BE[label="Your partner has permission from their parents or guardians"]
+	BF[label="Your partner is aged 16-18"]
+	BG[label="Your partner is over 18"]
+	BH[label="You are married or in a civil partnership"]
+	BI[label="Your partner is married or in a civil partnership"]
+	BJ[label="You and your partner are ?closely? related"]
+	BK[label="In England or Wales"]
+	BL[label="Eligible to marry or form a civil partnership in England or Wales"]
+	BM[label="Get married"]
+	BN[label="Enter into civil partnership"]
+	BO[label="Eligible to convert your civil partnership into a marriage"]
+	BP[label="I want to convert a civil partnership into a marriage"]
+	BQ[label="You and your partner are a same sex couple"]
+	BR[label="Ineigible to convert your civil partnership into a marriage"]
+	
+	// edges
+	1 -> AZ
+	2 -> AB
+	3 -> 4
+	4 -> 5
+	5 -> 2
+	5 -> 7
+	6 -> 7
+	7 -> AM
+	8 -> 5
+	9 -> 5
+	10 -> 5
+	11 -> 5
+	12 -> 5
+	13 -> AO
+	14 -> AN
+	15 -> 13
+	16 -> AQ
+	17 -> AZ
+	18 -> AR
+	19 -> AS
+	20 -> BL
+	21 -> 5
+	21 -> BL
+	21 -> 7
+	22 -> 21
+	23 -> 22
+	24 -> AZ
+	25 -> 26
+	26 -> 44
+	27 -> BD
+	28 -> BC
+	29 -> 44
+	30 -> 31
+	31 -> 44
+	32 -> 33
+	33 -> 21
+	34 -> 21
+	35 -> 21
+	36 -> BM
+	37 -> BN
+	38 -> BP
+	39 -> BM
+	40 -> 21
+	41 -> BG
+	42 -> BF
+	43 -> 44
+	44 -> 24
+	45 -> 44
+	46 -> BO
+	47 -> 48
+	48 -> BR
+	50 -> 21
+	52 -> 21
+	AA -> 2
+	AC -> 3
+	AD -> 3
+	AE -> 3
+	AF -> 3
+	AG -> 4
+	AI -> 6
+	AJ -> 6
+	AK -> 6
+	AL -> 7
+	AL -> 13
+	AM -> 14
+	AN -> 15
+	AO -> AP
+	AP -> 16
+	AQ -> 17
+	AQ -> 18
+	AR -> 19
+	AS -> 20
+	AT -> 12
+	AT -> 50
+	AU -> 11
+	AU -> 50
+	AV -> 10
+	AV -> 50
+	AW -> 9
+	AW -> 50
+	AX -> 8
+	AX -> 50
+	AY -> 1
+	AY -> 52
+	BA -> 1
+	BA -> 2
+	BA -> 7
+	BA -> 13
+	BA -> 24
+	BA -> 21
+	BB -> 23
+	BB -> 25
+	BC -> 23
+	BC -> 26
+	BC -> 27
+	BD -> 22
+	BD -> 28
+	BD -> 29
+	BE -> 32
+	BF -> 31
+	BF -> 32
+	BF -> 41
+	BG -> 33
+	BG -> 42
+	BG -> 43
+	BH -> 34
+	BH -> 44
+	BI -> 35
+	BI -> 44
+	BJ -> 40
+	BJ -> 44
+	BK -> 21
+	BK -> 45
+	BL -> 36
+	BL -> 37
+	BM -> BH
+	BN -> 38
+	BN -> BH
+	BO -> 39
+	BP -> 46
+	BP -> 48
+	BQ -> 46
+	BQ -> 47
+}
